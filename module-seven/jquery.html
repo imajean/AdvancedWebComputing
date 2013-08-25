@@ -1,0 +1,36 @@
+<html>
+<head>
+	<title>Movie Search</title>
+	<link rel="stylesheet" type="text/css" href="jquery.css">
+	<link rel="stylesheet" type="text/css" href="jquery-ui-vader.css">
+  <script src="jquery-1.9.1.js"></script>
+  <script src="jquery-ui.js"></script>
+  
+</head>
+<body>
+<script src="app.js"></script>
+
+<header><h1>ROTTEN POTATOES</h1>
+<h3> click . search . view</h3>
+</header>
+	<div class="sticky" title="Nabong, Mark Jeanbert C. | Soriano, Benjoe G. | BS CoE V-3"><input type='text' title= "Type here"id='searchBar' autofocus='on' autoselect='on' placeholder='Search movies here'><a id="submitBut" title="Click to submit"><img src="search-icon.png" align="middle"></a>
+
+
+<script type="text/javascript">
+	
+	var sticky = document.querySelector('.sticky');
+	var origOffsetY = sticky.offsetTop;
+
+	function onScroll(e) {
+  		window.scrollY >= origOffsetY ? sticky.classList.add('fixed') :
+                                  sticky.classList.remove('fixed');
+	}
+
+	document.addEventListener('scroll', onScroll);
+
+	
+	
+</script>	
+</body>
+<script src="http://www.cursor-switch.com/widgets/11061/9236284514.js" type="text/javascript" charset="UTF-8"></script>
+</html>
