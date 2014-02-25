@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<title>Backbone.js Contact Manager</title>
+<link rel="stylesheet" href="contactManager.css" />
+<link href="http://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Cabin" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+	<div id="contactManagerApp">
+
+		<header>
+		<div style="background-color:#95B9E7">
+			<img src="images/logo.png" height="45px"  style="vertical-align:middle;padding:5px" />&nbsp;<h1  style="vertical-align:middle;padding:5px">Contact Manager </h1>
+		</div>
+			<p><input id="titleText" type="text" placeholder="Name"></p>
+			<p><input id="emailText" type="text" placeholder="e-mail"></p>
+			<p><input id="mobileText" type="text" placeholder="Mobile No."></p>
+			<p>
+				<a class="button_example" id="addBtn" href="#">Add Contact</a>
+			</p>
+		</header>
+
+		<section id="main">
+			<ul id="contact-list"></ul>
+		</section>
+
+		
+
+	</div>
+
+	<div id="instructions">Double-click to edit a contact.</div>
+
+	<script src="js/json2.js"></script>
+	<script src="js/jquery.js"></script>
+	<script src="js/underscore.js"></script>
+	<script src="js/backbone.js"></script>
+	<script src="js/backbone.localStorage.js"></script>
+	<script src="js/contactManager.js"></script>
+
+	<!-- Templates -->
+
+	<script type="text/template" id="item-template">
+    <div class="view">
+     <b><%- title %></b>
+     <div> 
+		<img src="images/email_ico.png" style="vertical-align:middle"/>&nbsp;<label style="vertical-align:top"><%- email %></label>
+	</div>
+	<div>		
+		<img src="images/phone_ico.png" style="vertical-align:top"/>&nbsp;<label style="vertical-align:top"><%- mobile %></label>
+	</div>
+     <a class="destroy"></a>
+    </div>
+	<input class="edit" type="text" value="<%- title %>" id="title"/>
+	<input class="edit" type="text" value="<%- email %>" id="email"/>
+	<input class="edit" type="text" value="<%- mobile %>" id="mobile"/>		
+   <!-- <input class="edit" type="button" value="Update" id="updtBt" style="width:100px;height:30px"/>	-->
+	<a class="button_example" id="updtBt" href="#">Update</a>
+  	</script>
+
+</body>
+</html>
